@@ -14,21 +14,23 @@
   font-size: 1.5em;
   line-height: 1.5em;
   max-width: 230px;
-  font-weight: 300;
+  font-weight: 400;
   border-radius: 10px;
-  padding: 10px 5px;
+  padding: 5px 5px;
   margin-bottom: 10px;
   transition: 0.5s;
   cursor: pointer;
 }
 
 .event:hover {
-  background-color: rgba(255, 166, 0, 0.546);
+  color: #fff;
+  background-color: #e86b3da8;
   transition: 0.5s;
 }
 
 .selected-event {
-  background-color: rgba(255, 166, 0, 0.546);
+  color: #fff;
+  background-color: #e86a3d;
 }
 
 .over-hide {

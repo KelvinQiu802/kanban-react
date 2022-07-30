@@ -25,6 +25,7 @@
   margin-bottom: 20px;
   cursor: pointer;
   transition: 0.5s;
+  outline: none;
 }
 
 .add-button:hover {
