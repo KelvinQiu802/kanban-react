@@ -19,11 +19,11 @@
   border: 2px solid red;
   border-radius: 10px;
   cursor: pointer;
-  transition: 0.5s;
+  transition: 0.3s;
 }
 
 .remove-button:hover {
   color: #fff;
   background-color: red;
-  transition: 0.5s;
+  transition: 0.3s;
 }

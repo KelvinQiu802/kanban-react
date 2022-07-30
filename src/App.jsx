@@ -12,12 +12,6 @@ function App() {
   ]);
   const [currentEvent, setCurrentEvent] = React.useState(events[0]);
 
-  React.useEffect(() => {
-    if (!events.length) {
-      setEvents([{ title: 'Add a Event Now' }]);
-    }
-  }, [events]);
-
   return (
     <div className='App'>
       <EventBar
@@ -30,6 +24,7 @@ function App() {
         events={events}
         setEvents={setEvents}
         currentEvent={currentEvent}
+        setCurrentEvent={setCurrentEvent}
       />
     </div>
   );
