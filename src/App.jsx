@@ -20,7 +20,11 @@ function App() {
         currentEvent={currentEvent}
         setCurrentEvent={setCurrentEvent}
       />
-      <TaskBox />
+      <TaskBox
+        events={events}
+        setEvents={setEvents}
+        currentEvent={currentEvent}
+      />
     </div>
   );
 }
