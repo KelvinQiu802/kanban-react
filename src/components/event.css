@@ -1,0 +1,34 @@
+.event-bar-title {
+  font-size: 2.5em;
+  padding: 25px 0;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.event-container {
+  height: 850px;
+  padding: 0 30px;
+}
+
+.event {
+  font-size: 1.5em;
+  line-height: 1.5em;
+  max-width: 230px;
+  font-weight: 300;
+  border-radius: 10px;
+  padding: 10px 5px;
+  margin-bottom: 10px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.event:hover {
+  background-color: rgba(255, 166, 0, 0.546);
+  transition: 0.5s;
+}
+
+.over-hide {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
