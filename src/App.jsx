@@ -6,13 +6,19 @@ import TaskBox from './components/TaskBox';
 
 function App() {
   const [events, setEvents] = React.useState([
-    { title: 'Battleship' },
-    { title: 'Reading' },
+    { title: 'Battleship', tasks: {} },
+    { title: 'Reading', tasks: {} },
   ]);
-  const [currentEvent, setCurrentEvent] = React.useState(null);
+  const [currentEvent, setCurrentEvent] = React.useState(events[0]);
+
   return (
     <div className='App'>
-      <EventBar events={events} setEvents={setEvents} />
+      <EventBar
+        events={events}
+        setEvents={setEvents}
+        currentEvent={currentEvent}
+        setCurrentEvent={setCurrentEvent}
+      />
       <TaskBox />
     </div>
   );

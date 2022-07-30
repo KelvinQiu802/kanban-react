@@ -27,6 +27,10 @@
   transition: 0.5s;
 }
 
+.selected-event {
+  background-color: rgba(255, 166, 0, 0.546);
+}
+
 .over-hide {
   overflow: hidden;
   text-overflow: ellipsis;
