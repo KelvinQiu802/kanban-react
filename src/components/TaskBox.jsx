@@ -4,8 +4,8 @@ const TaskBox = ({ events, setEvents, currentEvent, setCurrentEvent }) => {
       setEvents((prev) => {
         const result = prev.filter((item) => item.title != currentEvent.title);
         if (!result.length) {
-          setEvents([{ title: 'Add a Event Now' }]);
-          setCurrentEvent({ title: 'Add a Event Now' });
+          setEvents([{ title: 'Add a New Event', tasks: [] }]);
+          setCurrentEvent({ title: 'Add a Event New', tasks: [] });
         } else {
           setCurrentEvent(result[0]);
         }
