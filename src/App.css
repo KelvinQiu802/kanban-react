@@ -18,6 +18,7 @@
 .add-button {
   width: 240px;
   height: 45px;
+  font-size: 1.3em;
   line-height: 45px;
   background-color: #eaf1f0;
   border-radius: 10px;
