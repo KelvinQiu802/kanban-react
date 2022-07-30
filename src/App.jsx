@@ -1,5 +1,6 @@
 import './App.css';
 import './components/event.css';
+import './components/task.css';
 import React from 'react';
 import EventBar from './components/EventBar';
 import TaskBox from './components/TaskBox';

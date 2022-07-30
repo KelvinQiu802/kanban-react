@@ -1,0 +1,29 @@
+.task-box-header {
+  display: flex;
+  align-items: center;
+  padding: 0 50px;
+  padding-top: 22px;
+}
+.task-box-title {
+  font-size: 2.5em;
+  padding: 25px 0;
+  font-weight: 500;
+}
+
+.remove-button {
+  font-size: 1.1em;
+  font-style: italic;
+  margin-left: 35px;
+  padding: 10px 10px;
+  background: none;
+  border: 2px solid red;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.remove-button:hover {
+  color: #fff;
+  background-color: red;
+  transition: 0.5s;
+}
