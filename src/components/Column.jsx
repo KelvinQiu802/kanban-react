@@ -14,13 +14,16 @@ const Column = ({ tag, currentEvent, events, setEvents }) => {
       const eventCopy = arrCopy[index];
       arrCopy.splice(index, 1, {
         title: currentEvent.title,
-        tasks: [...eventCopy.tasks, { name: name, details: details, tag: tag }],
+        tasks: [
+          ...eventCopy.tasks,
+          { name: name, details: details, state: tag },
+        ],
       });
       return arrCopy;
     });
   };
 
-  console.log(events);
+  console.log();
 
   return (
     <div className='column'>
