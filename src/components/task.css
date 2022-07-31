@@ -92,7 +92,7 @@
 }
 
 .task:hover {
-  background-color: #d9984911;
+  background-color: rgba(0, 119, 256, 0.014);
   transition: 0.2s;
 }
 
