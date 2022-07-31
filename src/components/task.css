@@ -47,6 +47,7 @@
   font-size: 1.4em;
   font-weight: 400;
   font-style: italic;
+  transition: 1s;
 }
 
 .add-task-button {
@@ -72,6 +73,7 @@
 
 .task-container {
   width: 100%;
+  min-height: 30px;
   max-height: 600px;
   overflow: auto;
 }
