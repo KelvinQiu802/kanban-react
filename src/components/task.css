@@ -82,10 +82,18 @@
   padding: 15px;
   border-radius: 10px;
   margin-bottom: 18px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.task:hover {
+  background-color: #d9984911;
+  transition: 0.2s;
 }
 
 .task-name {
   font-weight: 300;
+  line-height: 1.1em;
 }
 
 .task-name::before {
