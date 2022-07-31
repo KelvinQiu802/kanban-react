@@ -1,4 +1,4 @@
-const AddButton = ({ handleClick }) => {
+const AddEventButton = ({ handleClick }) => {
   return (
     <div className='add-button' onClick={handleClick}>
       +
@@ -6,4 +6,4 @@ const AddButton = ({ handleClick }) => {
   );
 };
 
-export default AddButton;
+export default AddEventButton;
