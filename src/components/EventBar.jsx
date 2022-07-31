@@ -13,8 +13,8 @@ const EventBar = ({ events, setEvents, currentEvent, setCurrentEvent }) => {
   return (
     <div className='event-bar'>
       <h1 className='event-bar-title'>.kanban</h1>
+      <AddEventButton handleClick={handleAdd} />
       <div className='event-container'>
-        <AddEventButton handleClick={handleAdd} />
         {events.map((item) => (
           <div
             key={item.title}
