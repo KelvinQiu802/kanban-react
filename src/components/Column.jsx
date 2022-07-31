@@ -15,9 +15,9 @@ const Column = ({ tag, currentEvent, events, setEvents }) => {
       );
       const eventCopy = arrCopy[index];
       arrCopy.splice(index, 1, {
-        title: currentEvent.title,
-        tasks: [
-          ...eventCopy.tasks,
+        ...eventCopy,
+        [tag]: [
+          ...eventCopy[tag],
           { name: name, id: uuid(), details: details, state: tag },
         ],
       });
@@ -39,27 +39,25 @@ const Column = ({ tag, currentEvent, events, setEvents }) => {
             >
               {events
                 .find((event) => event.title === currentEvent.title)
-                ?.tasks.map((item, index) => {
-                  if (item.state === tag) {
-                    return (
-                      <Draggable
-                        key={item.id}
-                        draggableId={item.id}
-                        index={index}
-                      >
-                        {(provided, snapshot) => {
-                          return (
-                            <Task
-                              name={item.name}
-                              details={item.details}
-                              provided={provided}
-                              snapshot={snapshot}
-                            />
-                          );
-                        }}
-                      </Draggable>
-                    );
-                  }
+                [tag].map((item, index) => {
+                  return (
+                    <Draggable
+                      key={item.id}
+                      draggableId={item.id}
+                      index={index}
+                    >
+                      {(provided, snapshot) => {
+                        return (
+                          <Task
+                            name={item.name}
+                            details={item.details}
+                            provided={provided}
+                            snapshot={snapshot}
+                          />
+                        );
+                      }}
+                    </Draggable>
+                  );
                 })}
               {provided.placeholder}
             </div>
