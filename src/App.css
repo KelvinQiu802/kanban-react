@@ -3,7 +3,8 @@
 }
 
 .event-bar {
-  flex-shrink: 0;
+  flex-shrink: 1;
+  min-width: 220px;
   text-align: center;
   width: 300px;
   height: 100vh;
@@ -12,12 +13,12 @@
 
 .task-box {
   flex: 1;
-  min-width: 1080px;
+  min-width: 1070px;
   background-color: #fefefe;
 }
 
 .add-button {
-  width: 240px;
+  width: 80%;
   height: 45px;
   font-size: 1.3em;
   line-height: 45px;
