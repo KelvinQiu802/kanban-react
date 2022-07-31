@@ -14,6 +14,7 @@ const Column = ({ tag, currentEvent, events, setEvents }) => {
         (event) => event.title === currentEvent.title
       );
       const eventCopy = arrCopy[index];
+      console.log(eventCopy);
       arrCopy.splice(index, 1, {
         ...eventCopy,
         [tag]: [
@@ -39,7 +40,7 @@ const Column = ({ tag, currentEvent, events, setEvents }) => {
             >
               {events
                 .find((event) => event.title === currentEvent.title)
-                [tag].map((item, index) => {
+                ?.[tag].map((item, index) => {
                   return (
                     <Draggable
                       key={item.id}

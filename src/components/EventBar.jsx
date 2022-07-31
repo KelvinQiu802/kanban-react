@@ -19,7 +19,7 @@ const EventBar = ({ events, setEvents, currentEvent, setCurrentEvent }) => {
           <div
             key={item.title}
             className={`event over-hide ${
-              currentEvent.title === item.title ? 'selected-event' : null
+              currentEvent.title === item.title ? 'selected-event' : ''
             }`}
             onClick={() => setCurrentEvent(item)}
           >

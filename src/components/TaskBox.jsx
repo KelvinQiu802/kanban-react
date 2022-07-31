@@ -16,7 +16,7 @@ const TaskBox = ({ events, setEvents, currentEvent, setCurrentEvent }) => {
             },
           ];
           setEvents(initEvent);
-          setCurrentEvent(initEvent);
+          setCurrentEvent(initEvent[0]);
         } else {
           setCurrentEvent(result[0]);
         }
