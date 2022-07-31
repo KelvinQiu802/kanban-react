@@ -25,9 +25,24 @@ const TaskBox = ({ events, setEvents, currentEvent, setCurrentEvent }) => {
         </button>
       </header>
       <div className='task-box-body'>
-        <Column tag='To do' />
-        <Column tag='In progress' />
-        <Column tag='Completed' />
+        <Column
+          tag='To do'
+          events={events}
+          setEvents={setEvents}
+          currentEvent={currentEvent}
+        />
+        <Column
+          tag='In progress'
+          events={events}
+          setEvents={setEvents}
+          currentEvent={currentEvent}
+        />
+        <Column
+          tag='Completed'
+          events={events}
+          setEvents={setEvents}
+          currentEvent={currentEvent}
+        />
       </div>
     </div>
   );

@@ -13,17 +13,17 @@ function App() {
         {
           name: 'Something',
           detals: 'SomethingSomethingSomething',
-          state: 'todo',
+          state: 'To do',
         },
         {
           name: 'Something',
           detals: 'SomethingSomethingSomething',
-          state: 'progress',
+          state: 'In progress',
         },
         {
           name: 'Something',
           detals: 'SomethingSomethingSomething',
-          state: 'completed',
+          state: 'Completed',
         },
       ],
     },
@@ -33,17 +33,17 @@ function App() {
         {
           name: 'Something',
           detals: 'SomethingSomethingSomething',
-          state: 'todo',
+          state: 'To do',
         },
         {
           name: 'Something',
           detals: 'SomethingSomethingSomething',
-          state: 'progress',
+          state: 'In progress',
         },
         {
           name: 'Something',
           detals: 'SomethingSomethingSomething',
-          state: 'completed',
+          state: 'Completed',
         },
       ],
     },
