@@ -4,6 +4,7 @@ import './components/task.css';
 import React from 'react';
 import EventBar from './components/EventBar';
 import TaskBox from './components/TaskBox';
+import uuid from 'react-uuid';
 
 function App() {
   const [events, setEvents] = React.useState([
@@ -12,16 +13,19 @@ function App() {
       tasks: [
         {
           name: 'Something',
+          id: uuid(),
           details: 'Something Something Something',
           state: 'To do',
         },
         {
           name: 'Something',
+          id: uuid(),
           details: 'SomethingSomethingSomething',
           state: 'In progress',
         },
         {
           name: 'Something',
+          id: uuid(),
           details: 'SomethingSomethingSomething',
           state: 'Completed',
         },
@@ -32,16 +36,19 @@ function App() {
       tasks: [
         {
           name: 'Something',
+          id: uuid(),
           details: 'SomethingSomethingSomething',
           state: 'To do',
         },
         {
           name: 'Something',
+          id: uuid(),
           details: 'SomethingSomethingSomething',
           state: 'In progress',
         },
         {
           name: 'Something',
+          id: uuid(),
           details: 'SomethingSomethingSomething',
           state: 'Completed',
         },

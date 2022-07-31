@@ -77,13 +77,16 @@
 }
 
 .task {
-  width: calc(100% - 30px);
+  width: calc(100% - 33px);
   background-color: #fff;
   padding: 15px;
   border-radius: 10px;
   margin-bottom: 18px;
   cursor: pointer;
   transition: 0.2s;
+  user-select: none;
+  border: 1px solid #ccc;
+  outline: none;
 }
 
 .task:hover {

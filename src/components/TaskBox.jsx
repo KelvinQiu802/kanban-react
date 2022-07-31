@@ -1,4 +1,5 @@
 import Column from './Column';
+import { DragDropContext } from 'react-beautiful-dnd';
 
 const TaskBox = ({ events, setEvents, currentEvent, setCurrentEvent }) => {
   const handleRemove = () => {
@@ -16,6 +17,15 @@ const TaskBox = ({ events, setEvents, currentEvent, setCurrentEvent }) => {
     }
   };
 
+  const handleDragEnd = (result) => {
+    console.log(result);
+    if (!result.destination) return;
+    const { source, destination } = result;
+    // Remove from source
+    const taskCopy = currentEvent[source.droppableId][source.index];
+    console.log(taskCopy);
+  };
+
   return (
     <div className='task-box'>
       <header className='task-box-header'>
@@ -24,26 +34,28 @@ const TaskBox = ({ events, setEvents, currentEvent, setCurrentEvent }) => {
           Remove this Event
         </button>
       </header>
-      <div className='task-box-body'>
-        <Column
-          tag='To do'
-          events={events}
-          setEvents={setEvents}
-          currentEvent={currentEvent}
-        />
-        <Column
-          tag='In progress'
-          events={events}
-          setEvents={setEvents}
-          currentEvent={currentEvent}
-        />
-        <Column
-          tag='Completed'
-          events={events}
-          setEvents={setEvents}
-          currentEvent={currentEvent}
-        />
-      </div>
+      <DragDropContext onDragEnd={(result) => handleDragEnd(result)}>
+        <div className='task-box-body'>
+          <Column
+            tag='To do'
+            events={events}
+            setEvents={setEvents}
+            currentEvent={currentEvent}
+          />
+          <Column
+            tag='In progress'
+            events={events}
+            setEvents={setEvents}
+            currentEvent={currentEvent}
+          />
+          <Column
+            tag='Completed'
+            events={events}
+            setEvents={setEvents}
+            currentEvent={currentEvent}
+          />
+        </div>
+      </DragDropContext>
     </div>
   );
 };

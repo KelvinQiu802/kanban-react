@@ -1,5 +1,7 @@
 import AddTaskButton from './AddTaskButton';
 import Task from './Task';
+import { Droppable, Draggable } from 'react-beautiful-dnd';
+import uuid from 'react-uuid';
 
 const Column = ({ tag, currentEvent, events, setEvents }) => {
   const handleAdd = () => {
@@ -16,30 +18,54 @@ const Column = ({ tag, currentEvent, events, setEvents }) => {
         title: currentEvent.title,
         tasks: [
           ...eventCopy.tasks,
-          { name: name, details: details, state: tag },
+          { name: name, id: uuid(), details: details, state: tag },
         ],
       });
       return arrCopy;
     });
   };
 
-  console.log();
-
   return (
     <div className='column'>
       {tag}
       <AddTaskButton handleClick={handleAdd} />
-      <div className='task-container'>
-        {events
-          .find((event) => event.title === currentEvent.title)
-          ?.tasks.map((item) => {
-            if (item.state === tag) {
-              return (
-                <Task key={item.name} name={item.name} details={item.details} />
-              );
-            }
-          })}
-      </div>
+      <Droppable droppableId={tag}>
+        {(provided, snapshot) => {
+          return (
+            <div
+              className='task-container'
+              ref={provided.innerRef}
+              {...provided.droppableProps}
+            >
+              {events
+                .find((event) => event.title === currentEvent.title)
+                ?.tasks.map((item, index) => {
+                  if (item.state === tag) {
+                    return (
+                      <Draggable
+                        key={item.id}
+                        draggableId={item.id}
+                        index={index}
+                      >
+                        {(provided, snapshot) => {
+                          return (
+                            <Task
+                              name={item.name}
+                              details={item.details}
+                              provided={provided}
+                              snapshot={snapshot}
+                            />
+                          );
+                        }}
+                      </Draggable>
+                    );
+                  }
+                })}
+              {provided.placeholder}
+            </div>
+          );
+        }}
+      </Droppable>
     </div>
   );
 };
