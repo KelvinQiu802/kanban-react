@@ -12,17 +12,17 @@ function App() {
       tasks: [
         {
           name: 'Something',
-          detals: 'SomethingSomethingSomething',
+          details: 'SomethingSomethingSomething',
           state: 'To do',
         },
         {
           name: 'Something',
-          detals: 'SomethingSomethingSomething',
+          details: 'SomethingSomethingSomething',
           state: 'In progress',
         },
         {
           name: 'Something',
-          detals: 'SomethingSomethingSomething',
+          details: 'SomethingSomethingSomething',
           state: 'Completed',
         },
       ],
@@ -32,17 +32,17 @@ function App() {
       tasks: [
         {
           name: 'Something',
-          detals: 'SomethingSomethingSomething',
+          details: 'SomethingSomethingSomething',
           state: 'To do',
         },
         {
           name: 'Something',
-          detals: 'SomethingSomethingSomething',
+          details: 'SomethingSomethingSomething',
           state: 'In progress',
         },
         {
           name: 'Something',
-          detals: 'SomethingSomethingSomething',
+          details: 'SomethingSomethingSomething',
           state: 'Completed',
         },
       ],
