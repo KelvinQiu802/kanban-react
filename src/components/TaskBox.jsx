@@ -1,3 +1,5 @@
+import Column from './Column';
+
 const TaskBox = ({ events, setEvents, currentEvent, setCurrentEvent }) => {
   const handleRemove = () => {
     if (confirm('You really whant to remove it?')) {
@@ -22,6 +24,11 @@ const TaskBox = ({ events, setEvents, currentEvent, setCurrentEvent }) => {
           Remove this Event
         </button>
       </header>
+      <div className='task-box-body'>
+        <Column tag='To do' />
+        <Column tag='In progress' />
+        <Column tag='Completed' />
+      </div>
     </div>
   );
 };
