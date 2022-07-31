@@ -12,7 +12,7 @@ function App() {
       title: 'Battleship',
       ['To do']: [
         {
-          name: 'Something',
+          name: 'Something1',
           id: uuid(),
           details: 'Something Something Something',
           state: 'To do',
@@ -20,7 +20,7 @@ function App() {
       ],
       ['In progress']: [
         {
-          name: 'Something',
+          name: 'Something2',
           id: uuid(),
           details: 'SomethingSomethingSomething',
           state: 'In progress',
@@ -28,7 +28,7 @@ function App() {
       ],
       ['Completed']: [
         {
-          name: 'Something',
+          name: 'Something3',
           id: uuid(),
           details: 'SomethingSomethingSomething',
           state: 'Completed',
