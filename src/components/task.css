@@ -40,7 +40,6 @@
 
 .column {
   width: 300px;
-  height: 300px;
   max-height: 700px;
   background-color: #f6f9fa;
   border-radius: 15px;
@@ -63,11 +62,17 @@
   outline: none;
   text-align: center;
   font-style: normal;
-  margin: 0 auto;
-  margin-top: 11px;
+  margin: 13px auto;
   font-size: 1.1em;
 }
 
 .add-task-button:hover {
   background-color: #dee4e4;
+}
+
+.task-container {
+  width: 100%;
+  max-height: 600px;
+  background-color: orange;
+  overflow: auto;
 }

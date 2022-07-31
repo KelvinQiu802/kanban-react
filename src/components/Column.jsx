@@ -1,4 +1,5 @@
 import AddTaskButton from './AddTaskButton';
+import Task from './Task';
 
 const Column = ({ tag, currentEvent, events, setEvents }) => {
   const handleAdd = () => {
@@ -19,10 +20,23 @@ const Column = ({ tag, currentEvent, events, setEvents }) => {
     });
   };
 
+  console.log(events);
+
   return (
     <div className='column'>
       {tag}
       <AddTaskButton handleClick={handleAdd} />
+      <div className='task-container'>
+        {events
+          .find((event) => event.title === currentEvent.title)
+          .tasks.map((item) => {
+            if (item.state === tag) {
+              return (
+                <Task key={item.name} name={item.name} details={item.details} />
+              );
+            }
+          })}
+      </div>
     </div>
   );
 };
