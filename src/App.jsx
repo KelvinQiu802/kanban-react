@@ -10,19 +10,23 @@ function App() {
   const [events, setEvents] = React.useState([
     {
       title: 'Battleship',
-      tasks: [
+      ['To do']: [
         {
           name: 'Something',
           id: uuid(),
           details: 'Something Something Something',
           state: 'To do',
         },
+      ],
+      ['In progress']: [
         {
           name: 'Something',
           id: uuid(),
           details: 'SomethingSomethingSomething',
           state: 'In progress',
         },
+      ],
+      ['Completed']: [
         {
           name: 'Something',
           id: uuid(),
@@ -33,19 +37,23 @@ function App() {
     },
     {
       title: 'Reading',
-      tasks: [
+      ['To do']: [
         {
           name: 'Something',
           id: uuid(),
-          details: 'SomethingSomethingSomething',
+          details: 'Something Something Something',
           state: 'To do',
         },
+      ],
+      ['In progress']: [
         {
           name: 'Something',
           id: uuid(),
           details: 'SomethingSomethingSomething',
           state: 'In progress',
         },
+      ],
+      ['Completed']: [
         {
           name: 'Something',
           id: uuid(),
@@ -55,6 +63,7 @@ function App() {
       ],
     },
   ]);
+
   const [currentEvent, setCurrentEvent] = React.useState(events[0]);
 
   return (
