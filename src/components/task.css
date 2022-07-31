@@ -97,6 +97,8 @@
 }
 
 .task-name {
+  font-style: normal;
+  font-size: 0.9em;
   font-weight: 300;
   line-height: 1.1em;
 }
@@ -114,6 +116,6 @@
   font-size: 0.8em;
   color: #9c9c9c;
   word-wrap: break-word;
-  margin-top: 15px;
+  margin-top: 10px;
   line-height: 1.1em;
 }
