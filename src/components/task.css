@@ -62,7 +62,7 @@
   outline: none;
   text-align: center;
   font-style: normal;
-  margin: 13px auto;
+  margin: 15px auto;
   font-size: 1.1em;
 }
 
@@ -73,6 +73,34 @@
 .task-container {
   width: 100%;
   max-height: 600px;
-  background-color: orange;
   overflow: auto;
+}
+
+.task {
+  width: calc(100% - 30px);
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 18px;
+}
+
+.task-name {
+  font-weight: 300;
+}
+
+.task-name::before {
+  content: '●';
+  font-style: normal;
+  color: #f19737;
+  margin-right: 10px;
+}
+
+.task-details {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 0.8em;
+  color: #9c9c9c;
+  word-wrap: break-word;
+  padding: 8px;
+  line-height: 1.1em;
 }

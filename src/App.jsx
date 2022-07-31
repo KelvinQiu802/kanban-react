@@ -12,7 +12,7 @@ function App() {
       tasks: [
         {
           name: 'Something',
-          details: 'SomethingSomethingSomething',
+          details: 'Something Something Something',
           state: 'To do',
         },
         {
