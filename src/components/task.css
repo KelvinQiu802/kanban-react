@@ -119,3 +119,19 @@
   margin-top: 10px;
   line-height: 1.1em;
 }
+
+.remove-bar {
+  text-align: end;
+  font-size: 3.5em;
+  font-weight: 300;
+  color: #888;
+  line-height: 0.1em;
+  transition: 0.5s;
+}
+
+.remove-bar:hover {
+  color: red;
+  font-size: 9em;
+  line-height: 0.05em;
+  transition: 0.5s;
+}
