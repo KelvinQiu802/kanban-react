@@ -1,4 +1,4 @@
-const Task = ({ name, details, provided, snapshot }) => {
+const Task = ({ name, details, id, provided, handleRemove }) => {
   return (
     <div
       className='task'
@@ -8,7 +8,9 @@ const Task = ({ name, details, provided, snapshot }) => {
     >
       <h2 className='task-name over-hide'>{name}</h2>
       <p className='task-details'>{details}</p>
-      <div className='remove-bar'>-</div>
+      <div className='remove-bar' onClick={() => handleRemove(id)}>
+        -
+      </div>
     </div>
   );
 };

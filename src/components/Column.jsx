@@ -25,6 +25,21 @@ const Column = ({ tag, currentEvent, events, setEvents }) => {
     });
   };
 
+  const handleRemove = (id) => {
+    setEvents((prev) =>
+      prev.map((event) => {
+        if (event.title === currentEvent.title) {
+          const taskList = event[tag];
+          const index = taskList.findIndex((item) => item.id === id);
+          taskList.splice(index, 1);
+          return { ...event, [tag]: [...taskList] };
+        } else {
+          return event;
+        }
+      })
+    );
+  };
+
   return (
     <div className='column'>
       {tag}
@@ -52,8 +67,10 @@ const Column = ({ tag, currentEvent, events, setEvents }) => {
                           <Task
                             name={item.name}
                             details={item.details}
+                            id={item.id}
                             provided={provided}
                             snapshot={snapshot}
+                            handleRemove={handleRemove}
                           />
                         );
                       }}
