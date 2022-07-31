@@ -3,10 +3,22 @@ import AddEventButton from './AddEventButton';
 const EventBar = ({ events, setEvents, currentEvent, setCurrentEvent }) => {
   const handleAdd = () => {
     const title = prompt('Enter the Title:');
+    // Prevent Duplicated
+    if (
+      events.find((event) => event.title.toLowerCase() === title.toLowerCase())
+    ) {
+      alert('Event Already Existed');
+      return;
+    }
     if (title)
       setEvents((prev) => [
         ...prev,
-        { title: title, ['To do']: [], ['In progress']: [], ['Completed']: [] },
+        {
+          title: title,
+          ['To do']: [],
+          ['In progress']: [],
+          ['Completed']: [],
+        },
       ]);
   };
 
