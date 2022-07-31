@@ -26,10 +26,10 @@ const TaskBox = ({ events, setEvents, currentEvent, setCurrentEvent }) => {
   };
 
   const handleDragEnd = (result) => {
-    console.log(result);
     if (!result.destination) return;
     const { source, destination } = result;
-    const taskCopy = currentEvent[source.droppableId][source.index];
+    const curEvent = events.find((item) => item.title === currentEvent.title);
+    const taskCopy = curEvent[source.droppableId][source.index];
     // Remove from source
     setEvents((prev) =>
       prev.map((event) => {

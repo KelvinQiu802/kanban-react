@@ -15,7 +15,6 @@ function App() {
           name: 'Something1',
           id: uuid(),
           details: 'Something Something Something',
-          state: 'To do',
         },
       ],
       ['In progress']: [
@@ -23,7 +22,6 @@ function App() {
           name: 'Something2',
           id: uuid(),
           details: 'SomethingSomethingSomething',
-          state: 'In progress',
         },
       ],
       ['Completed']: [
@@ -31,7 +29,6 @@ function App() {
           name: 'Something3',
           id: uuid(),
           details: 'SomethingSomethingSomething',
-          state: 'Completed',
         },
       ],
     },
