@@ -12,23 +12,28 @@ function App() {
       title: 'Battleship',
       ['To do']: [
         {
-          name: 'Something1',
+          name: 'Welcome Page',
           id: uuid(),
-          details: 'Something Something Something',
+          details: 'Create welcome page and a start button',
+        },
+        {
+          name: 'Design Result Page',
+          id: uuid(),
+          details: 'Design the Result page and send it to Lydia.',
         },
       ],
       ['In progress']: [
         {
-          name: 'Something2',
+          name: 'Board',
           id: uuid(),
-          details: 'SomethingSomethingSomething',
+          details: 'Beautifying the Board UI',
         },
       ],
       ['Completed']: [
         {
-          name: 'Something3',
+          name: 'Discussion',
           id: uuid(),
-          details: 'SomethingSomethingSomething',
+          details: '8pm, Jul 31, Zomm Meeting with group partners',
         },
       ],
     },
