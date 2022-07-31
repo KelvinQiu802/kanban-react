@@ -49,3 +49,25 @@
   font-weight: 400;
   font-style: italic;
 }
+
+.add-task-button {
+  width: 300px;
+  height: 40px;
+  font-size: 1.3em;
+  line-height: 40px;
+  background-color: #ebf1f1;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  transition: 0.5s;
+  outline: none;
+  text-align: center;
+  font-style: normal;
+  margin: 0 auto;
+  margin-top: 11px;
+  font-size: 1.1em;
+}
+
+.add-task-button:hover {
+  background-color: #dee4e4;
+}
