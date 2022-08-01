@@ -6,34 +6,25 @@ import EventBar from './components/EventBar';
 import TaskBox from './components/TaskBox';
 
 function App() {
+  const initEvent = [
+    {
+      title: 'Add a new Event',
+      ['To do']: [],
+      ['In progress']: [],
+      ['Completed']: [],
+    },
+  ];
   const [events, setEvents] = React.useState(() => {
     return localStorage.getItem('events')
       ? JSON.parse(localStorage.getItem('events'))
-      : [
-          {
-            title: 'Add a new Event',
-            ['To do']: [],
-            ['In progress']: [],
-            ['Completed']: [],
-          },
-        ];
+      : initEvent;
   });
 
   const [currentEvent, setCurrentEvent] = React.useState(events[0]);
 
   React.useEffect(() => {
     if (!events.length) {
-      localStorage.setItem(
-        'events',
-        JSON.stringify([
-          {
-            title: 'Add a new Event',
-            ['To do']: [],
-            ['In progress']: [],
-            ['Completed']: [],
-          },
-        ])
-      );
+      localStorage.setItem('events', JSON.stringify(initEvent));
       setEvents(JSON.parse(localStorage.getItem('events')));
     } else {
       localStorage.setItem('events', JSON.stringify(events));
