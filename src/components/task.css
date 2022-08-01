@@ -79,6 +79,7 @@
 }
 
 .task {
+  position: relative;
   width: calc(100% - 33px);
   background-color: #fff;
   padding: 15px;
@@ -121,6 +122,9 @@
 }
 
 .remove-bar {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
   text-align: end;
   font-size: 3.5em;
   font-weight: 300;
@@ -131,7 +135,7 @@
 
 .remove-bar:hover {
   color: red;
-  font-size: 9em;
-  line-height: 0.05em;
+  font-size: 8em;
+  line-height: 0.01em;
   transition: 0.5s;
 }
