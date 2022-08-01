@@ -10,6 +10,7 @@ const EventBar = ({ events, setEvents, currentEvent, setCurrentEvent }) => {
       alert('Event Already Existed');
       return;
     }
+    // Add new event
     if (title)
       setEvents((prev) => [
         ...prev,

@@ -14,6 +14,7 @@ function App() {
       ['Completed']: [],
     },
   ];
+
   const [events, setEvents] = React.useState(() => {
     return localStorage.getItem('events')
       ? JSON.parse(localStorage.getItem('events'))
@@ -22,6 +23,7 @@ function App() {
 
   const [currentEvent, setCurrentEvent] = React.useState(events[0]);
 
+  // Set localStorage
   React.useEffect(() => {
     if (!events.length) {
       localStorage.setItem('events', JSON.stringify(initEvent));

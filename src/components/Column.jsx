@@ -14,6 +14,7 @@ const Column = ({ tag, currentEvent, events, setEvents }) => {
         (event) => event.title === currentEvent.title
       );
       const eventCopy = arrCopy[index];
+      // Remove old and add the latest data
       arrCopy.splice(index, 1, {
         ...eventCopy,
         [tag]: [
