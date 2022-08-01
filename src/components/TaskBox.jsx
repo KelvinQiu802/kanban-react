@@ -30,25 +30,19 @@ const TaskBox = ({ events, setEvents, currentEvent, setCurrentEvent }) => {
     const { source, destination } = result;
     const curEvent = events.find((item) => item.title === currentEvent.title);
     const taskCopy = curEvent[source.droppableId][source.index];
-    // Remove from source
     setEvents((prev) =>
       prev.map((event) => {
         if (event.title === currentEvent.title) {
-          const taskList = event[source.droppableId];
-          taskList.splice(source.index, 1);
-          return { ...event, [source.droppableId]: taskList };
-        } else {
-          return event;
-        }
-      })
-    );
-    // Add to destination
-    setEvents((prev) =>
-      prev.map((event) => {
-        if (event.title === currentEvent.title) {
-          const taskList = event[destination.droppableId];
-          taskList.splice(destination.index, 0, taskCopy);
-          return { ...event, [destination.droppableId]: taskList };
+          let eventCopy = { ...event };
+          // Remove from source
+          const taskListSource = event[source.droppableId];
+          taskListSource.splice(source.index, 1);
+          eventCopy = { ...event, [source.droppableId]: taskListSource };
+          // Add to destination
+          const taskListDes = event[destination.droppableId];
+          taskListDes.splice(destination.index, 0, taskCopy);
+          eventCopy = { ...event, [destination.droppableId]: taskListDes };
+          return eventCopy;
         } else {
           return event;
         }
