@@ -1,6 +1,6 @@
 # ✔️ Kanban Board - With React
 
-<p align="center"><img src="https://imgbed.codingkelvin.fun/uPic/favicon.svg" style="zoom:80%;" /></p>
+<p align="center"><img src="https://imgbed.codingkelvin.fun/uPic/TODO_INFO.svg" style="zoom:80%;" /></p>
 
 
 ## Features
