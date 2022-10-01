@@ -4,7 +4,7 @@ import { DragDropContext } from 'react-beautiful-dnd';
 
 const TaskBox = ({ events, setEvents, currentEvent, setCurrentEvent }) => {
   const handleRemove = useCallback(() => {
-    if (confirm('You really whant to remove it?')) {
+    if (confirm('You really want to remove it?')) {
       // update events
       setEvents((prev) => {
         const result = prev.filter((item) => item.title != currentEvent.title);
