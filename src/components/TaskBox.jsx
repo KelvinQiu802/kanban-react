@@ -67,6 +67,7 @@ const TaskBox = ({ events, setEvents, currentEvent, setCurrentEvent }) => {
           {
             ['To do', 'In progress', 'Completed'].map(tag => (
               <Column
+                key={tag}
                 tag={tag}
                 events={events}
                 setEvents={setEvents}
